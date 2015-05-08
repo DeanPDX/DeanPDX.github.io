@@ -12,11 +12,17 @@ The confirmation email told me to go to the Intercontinental Hotel (located next
 
 After getting a HoloLens shirt (I live for free shirts so I was ecstatic about this) and a special badge, we were taken to a secure locker room and instructed to leave pretty much all of our personal belongings in a locker.  I took off my sweatshirt and loaded my phone, keys, wallet, and backpack in to the locker.  Next we got a brief introduction on how to do gestures, they measured the distance of our eyes (for calibrating the HoloLens) and we were ushered in to our own private rooms.
 
-## The Experience
+## The Demos
 There were two people in the room running the demo.  One person doing the talking and another that was sitting quietly on a laptop.  I have no idea what the person on the laptop was doing which lead to later speculation among my group of attendees that they were acting as a Mechanical Turk and watching me for gestures and quickly relaying the command to the HoloLens.
 
 The HoloLens fit over my head pretty comfortably.  They had a Microsoft logo with a box around it filling the screen and said to adjust it until I could see the whole image clearly.  It took a bit of fiddling to get it just right.  I got the impression that the pre-release units are very delicate as I was instructed to only touch the strap section and when my hands accidentally got closer to the body of the unit they were very quick to jump in and politely remind me to only touch the strap.
 
-My demo consisted of 3 parts:
+Immediately I noticed that the field of view was small.  Instead of being immersed on a holographic experience, you have a box in the middle of your visual field where you can see the holographic overlays.  This is completely unscientific, but, it looked something like this:
 
-#### Scanning The Room
+![HoloLens field of view](/images/2015-05-08/HoloLens-field-of-view.png)
+
+#### Demo 1: Poster Placement
+
+#### Demo 2: Acquarium
+
+#### Demo 1: Painting my X-Wing
