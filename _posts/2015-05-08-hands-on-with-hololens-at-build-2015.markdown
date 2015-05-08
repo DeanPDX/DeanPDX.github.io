@@ -2,10 +2,11 @@
 layout: post
 title:  "Hands-On With HoloLens at Build 2015"
 date:   2015-05-08 10:26:02
+categories: events build2015
 ---
 
 ## Introduction
-At the Build 2015 day 1 keynote, Alex Kipman announced that they had "hundreds" of HoloLens devices at the event and that attendees could register to have a chance to demo one.  As soon as the slide with the registration link went up, the event wifi and mobile carrier traffic exploded with people trying to register before their peers.  As you might have guessed from the title of this blog post, I was one of the lucky people who got an appointment.
+At the Build 2015 day 1 keynote, Alex Kipman ([@akipman](https://twitter.com/akipman)) announced that they had "hundreds" of HoloLens devices at the event and that attendees could register to have a chance to demo one.  As soon as the slide with the registration link went up, the event wifi and mobile carrier traffic exploded with people trying to register before their peers.  As you might have guessed from the title of this blog post, I was one of the lucky people who got an appointment.
 
 ## The Setup
 The confirmation email told me to go to the Intercontinental Hotel (located next to the event).  When I got there, it quickly became evident that security was *very* important to Microsoft.  They put my group on the elevator (which was secured by guards) and radio'd the 27th floor that we were on our way.
