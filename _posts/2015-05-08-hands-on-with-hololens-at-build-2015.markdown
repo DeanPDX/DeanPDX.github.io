@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hands-On With HoloLens at Build 2015"
+title:  "Hands-On with HoloLens at Build 2015"
 date:   2015-05-08 10:26:02
 ---
 
@@ -19,10 +19,15 @@ The HoloLens fit over my head pretty comfortably.  They had a Microsoft logo wit
 
 Immediately I noticed that the field of view was small.  Instead of being immersed on a holographic experience, you have a box in the middle of your visual field where you can see the holographic overlays.  This is completely unscientific, but, it looked something like this:
 
-![HoloLens field of view](/images/2015-05-08/HoloLens-field-of-view.png)
+![HoloLens field of view](/images/2015/HoloLens-field-of-view.png)
 
 #### Demo 1: Poster Placement
+All of the demos came from a virtual toolbox that I had placed on the left hand side of the room.  You start the poster demo by pulling a poster out of the toolbox using the "click" command (hold your index finger straight up, and then press down as if you are clicking an invisible mouse button).  Next, you issue a voice command to tell the HoloLens to scan the room.  The room-scanning sequence was pretty amazing.  It shows you what looks like a 3d radar scan / edge detection of the room happening in real-time.  Afterwards you are able to place the poster on any surface you want with another click command.
 
-#### Demo 2: Acquarium
+#### Demo 2: Aquarium
+You pull a small aquarium out of the toolbox and, using the click command, place it on a small table in the room.  Next, you issue a voice command to make the aquarium large enough to fill most of the room.  From here, you are able to add fish and change their size and direction.  Once you have modified the aquarium to your satisfaction, you issue another command to shrink it down to sit on the table again.
 
-#### Demo 1: Painting my X-Wing
+#### Demo 3: Customizing an X-Wing
+You place an X-Wing in the room from the toolbox and are able to paint panels using a paint fill tool.  You are also able to walk around the X-Wing and examine it in 3D which was really cool.  After you are done, they show you a model on the laptop that is representative of your customized X-Wing.
+
+## Conclusion and Impressions
