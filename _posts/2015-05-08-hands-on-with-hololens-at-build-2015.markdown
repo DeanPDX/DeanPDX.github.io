@@ -2,7 +2,6 @@
 layout: post
 title:  "Hands-On With HoloLens at Build 2015"
 date:   2015-05-08 10:26:02
-categories: events build2015
 ---
 
 ## Introduction
