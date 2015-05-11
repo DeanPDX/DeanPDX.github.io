@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Building a Minecraft Mod Project with Visual Studio 2015 and Windows 10"
-date:   2015-05-08 10:26:02
+title:  "Building a Minecraft Mod with Visual Studio 2015 and Windows 10"
+date:   2015-05-10 18:13:02
 ---
 
 ## Getting Started
