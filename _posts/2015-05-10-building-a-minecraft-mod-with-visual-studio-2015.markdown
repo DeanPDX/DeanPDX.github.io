@@ -208,4 +208,4 @@ You should now be able to hit it with flint and steel to make it explode.  It's 
 ## Wrapping Up
 I hope this gives you some ideas as to how you can get started creating your own Minecraft mods.  If you have any questions, hit me up via [twitter](https://twitter.com/PdxDavidson) and I will try to help.
 
-You can download the source for this project [here](https://github.com/DeanPDX/hello-minecraft).  If you have any suggestions for edits, send me a pull request!  Test.
+You can download the source for this project [here](https://github.com/DeanPDX/hello-minecraft).  If you have any suggestions for edits, send me a pull request!
