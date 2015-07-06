@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<style>
+	#test {
+  width: 50%;
+  color: green;
+  background-color: black;
+}
+</style>
+</head>
+<body>
+<div id='test'>
+  <p>Some Content</p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+    handleOffset();
+});
+$(window).resize(function () {
+    handleOffset();
+});
+function handleOffset() {
+    var testDiv = $('#test');
+    var divWidth = testDiv.width();
+    var aspectRatio = 0.3;
+    var divHeight = divWidth * aspectRatio;
+    testDiv.height(divHeight);
+}
+</script>
+</body>
+</html>
