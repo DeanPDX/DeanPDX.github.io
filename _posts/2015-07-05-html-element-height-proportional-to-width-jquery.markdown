@@ -42,7 +42,7 @@ $(window).resize(function () {
 function handleOffset() {
     var testDiv = $('#test');
     var divWidth = testDiv.width();
-    var aspectRatio = 0.3;
+    var aspectRatio = 0.3; // Update as needed
     var divHeight = divWidth * aspectRatio;
     testDiv.height(divHeight);
 }
