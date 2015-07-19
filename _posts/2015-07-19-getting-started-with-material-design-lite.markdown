@@ -4,10 +4,10 @@ title:  "Getting Started With Material Design Lite"
 date:   2015-07-19 12:40:22
 ---
 
-Google recently released [Material Design Lite](http://www.getmdl.io/) and it looks modern and promising.  Plus, it's not Bootstrap so it has that going for it (go ahead and throw your rotten veggies at me now but know this: I have used and loved Bootstrap on many a project but am ready for some new options).  That having been said, it's still new and thus not without its' flaws.
+Google recently released [Material Design Lite](http://www.getmdl.io/) and it looks modern and promising.  Plus, it's not Bootstrap so it has that going for it (go ahead and throw your rotten veggies at me now but know this: I have used and loved Bootstrap on many a project but am ready for some new options).  That having been said, it's still new and thus not without its' flaws so you should proceed with caution if you are using it in production.
 
 ##MDL Address Entry Form
-Let's keep it simple and build an Address entry form with a busy indicator and a fake submit button.  This assumes you have references to MDL stylesheets, scripts and jquery referenced in your head tag.
+Let's keep it simple and build an Address entry form with a busy indicator and a fake submit button.  This assumes you have links to MDL stylesheets, scripts and jquery referenced in your head tag.
 
 I decided to use `mdl-grid` to handle my form layout.  MDL's grid system is really easy to use.  Here are the upshot of the cell column widths:
 
@@ -17,7 +17,7 @@ I decided to use `mdl-grid` to handle my form layout.  MDL's grid system is real
 * You can target devices using the following class declaration: 
   * `class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"` <- 8 (or 100% width) on tablet, 6 (or 50% width) on desktop
 
-Without furtho ado, here is our HTML:
+Without further ado, here is our HTML:
 
 {% highlight html %}
 <div class="mdl-grid">
