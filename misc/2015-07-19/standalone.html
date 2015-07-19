@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- MDL Stuff -->
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- End MDL Stuff -->
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<style>
+		#placeOrder {
+		  margin-left: 15px;
+		}
+		#rememberAddress {
+		  verticle-align: bottom;
+		}
+		#orderBusyIndicator.is-active {
+		  position: relative;
+		  top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout__container">
+	  <div class="mdl-layout__content">
+	    <div class="mdl-grid">
+	      <div class="mdl-typography--headline mdl-cell mdl-cell--12-col">Billing Address</div>
+	      <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+	        <input class="mdl-textfield__input" type="text" id="firstname" />
+	        <label class="mdl-textfield__label" for="firstname">First Name</label>
+	      </div>
+	      <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+	        <input class="mdl-textfield__input" type="text" id="firstname" />
+	        <label class="mdl-textfield__label" for="lastname">Last Name</label>
+	      </div>
+	      <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+	        <input class="mdl-textfield__input" type="text" id="address1" />
+	        <label class="mdl-textfield__label" for="address1">Address 1</label>
+	      </div>
+	      <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+	        <input class="mdl-textfield__input" type="text" id="address2" />
+	        <label class="mdl-textfield__label" for="address2">Address 2</label>
+	      </div>
+	      <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+	        <input class="mdl-textfield__input" type="text" id="city" />
+	        <label class="mdl-textfield__label" for="city">City</label>
+	      </div>
+	      <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+	        <input class="mdl-textfield__input" type="text" id="state" />
+	        <label class="mdl-textfield__label" for="state">State</label>
+	      </div>
+	      <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--4-col">
+	        <input class="mdl-textfield__input" type="text" id="zip" />
+	        <label class="mdl-textfield__label" for="zip">Zip</label>
+	      </div>
+	    </div>
+	    <button id="placeOrder" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+	      Place Order
+	    </button>
+	    <div id="orderBusyIndicator" class="mdl-spinner mdl-js-spinner"></div>
+	  </div>
+	</div>
+	<script>
+	$('#placeOrder').click(function () {
+	    $('#orderBusyIndicator').addClass('is-active');
+	    $(this).prop('disabled', true);
+	    setTimeout(function () {
+	        $('#placeOrder').prop('disabled', false);
+	        $('#orderBusyIndicator').removeClass('is-active');
+	    }, 2000);
+	});
+	</script>
+</body>
+</html>
