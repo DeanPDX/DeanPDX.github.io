@@ -5,7 +5,7 @@ date:   2015-07-05 20:33:22
 ---
 
 ## Introduction
-Recently, I needed to have a div element with height proportional to its width.  There are some modern ways of solving this problem (for example, [this](http://www.mademyday.de/css-height-equals-width-with-pure-css.html])) but I (unfortunately) had to support IE 7 in this case.  Here is that modern solution rendered in IE8 using IE7 mode:
+Recently, I needed to have a div element with height proportional to its width.  There are some modern ways of solving this problem (for example, [this](http://www.mademyday.de/css-height-equals-width-with-pure-css.html)) but I (unfortunately) had to support IE 7 in this case.  Here is that modern solution rendered in IE8 using IE7 mode:
 
 ![Modern Tricks Look Awesome in IE8](/images/2015-height-width/modern-solution.png)
 
