@@ -63,10 +63,6 @@ Let's add the following CSS:
   margin-left: 15px;
 }
 
-#rememberAddress {
-  verticle-align: bottom;
-}
-
 #orderBusyIndicator.is-active {
   position: relative;
   top: 10px;
