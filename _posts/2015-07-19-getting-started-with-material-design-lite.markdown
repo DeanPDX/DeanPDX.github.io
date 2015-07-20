@@ -9,13 +9,15 @@ Google recently released [Material Design Lite](http://www.getmdl.io/) and it lo
 ##MDL Address Entry Form
 Let's keep it simple and build an Address entry form with a busy indicator and a fake submit button.  This assumes you have links to MDL stylesheets, scripts and jquery referenced in your head tag.
 
-I decided to use `mdl-grid` to handle my form layout.  MDL's grid system is really easy to use.  Here are the upshot of the cell column widths:
+I decided to use `mdl-grid` to handle my form layout.  MDL's grid system is really easy to use.  On desktop you have 12 grid columns to work with.  This is how the columns break down on different media:
 
 * `4` will be 100% width on phone
 * `8` will be 100% width on tablet
-* `12` will be 100& on desktop
+* `12` will be 100% on desktop
 * You can target devices using the following class declaration: 
   * `class="mdl-cell mdl-cell--6-col mdl-cell--8-col-tablet"` <- 8 (or 100% width) on tablet, 6 (or 50% width) on desktop
+
+If you use a cell with a value that is greater than whatever your current media can support (e.g. `12` and you are on mobile), it will automatically default to 100% (so the equivalent of `4` in that case).
 
 Without further ado, here is our HTML:
 
