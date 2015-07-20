@@ -87,7 +87,7 @@ $('#placeOrder').click(function() {
 
 ... and that's it.  Here is our form up and running:
 
-<iframe height='475' scrolling='no' src='/misc/2015-07-19/standalone.html' frameborder='no' allowtransparency='true' style='width: 100%;'>
+<iframe height='475' src='/misc/2015-07-19/standalone.html' frameborder='no' allowtransparency='true' style='width: 100%;'>
 </iframe>
 
 I have also included all of this in a [Pen](http://codepen.io/DeanPDX/pen/QbBzJv) for your viewing pleasure.  Questions, comments, rants or raves?  Let me know!
