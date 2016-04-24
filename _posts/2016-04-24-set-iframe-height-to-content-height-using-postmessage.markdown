@@ -124,7 +124,7 @@ Now, all we need to do is listen for messages, wait for the frame to load and se
 {% endhighlight %}
 
 ## Putting It All Together
-Both of these frames have an initial height of "100".  Here is the frame without using `postMessage` to keep the height in sync.  Go ahead and click "Make this page more awesome!" and see what happens:
+Both of these frames have an initial height of "100".  Here is the frame without using `postMessage` to keep the height in sync.  Go ahead and click "Make this page more awesome!" a few times and see what happens:
 <iframe id="iframe1" height='100' src='/misc/2016-04-24/iframe.html' frameborder='no' allowtransparency='true' style='width: 100%;'>
 </iframe>
 
