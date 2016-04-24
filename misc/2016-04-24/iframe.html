@@ -22,7 +22,7 @@
             function receiveMessage(event) {
                 // Note: you would want to check event.origin here
                 // if this were in the "real" world.
-                $('#log').append('<p>Origin: ' + event.origin);
+                $('#log').append('<p>Origin: ' + event.origin + '</p>');
                 var object = JSON.parse(event.data);
                 parentMessageEvent = event;
             }
