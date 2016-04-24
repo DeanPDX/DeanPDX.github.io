@@ -3,6 +3,7 @@ layout: post
 title:  "Building a Minecraft Mod with Visual Studio 2015 and Windows 10"
 date:   2015-05-10 18:13:02
 excerpt: "Build your own Minecraft Mod using Visual Studio 2015's new Minecraft Mod Developer Pack extension."
+featured_image: /images/2015-minecraft/textures-all-good.png
 ---
 
 ## Getting Started
