@@ -128,14 +128,16 @@ Both of these frames have an initial height of "100".  Here is the frame without
 <iframe id="iframe1" height='100' src='/misc/2016-04-24/iframe.html' frameborder='no' allowtransparency='true' style='width: 100%;'>
 </iframe>
 
-As you can see, we get scrollbars and it makes it extremely difficult to properly enjoy all of those glorious kittens.  The user suddenly realizes that your site is using iframes and they grow suspicious that you are going to have a `prompt()` for their name so you can greet them and they exit your site as quickly as possible.  Now, let's try that with our postMessage approach to keep the height in sync with the content:
+As you can see, we get scrollbars and it makes it extremely difficult to properly enjoy all of those glorious kittens.  The user suddenly realizes that your site is using iframes and they grow suspicious that you are going to have a `prompt()` for their name so you can greet them and they exit your site as quickly as possible.  Now, let's try that with our `postMessage` approach to keep the height in sync with the content:
 <iframe id="responsiveFrame" height="100" src='/misc/2016-04-24/iframe.html' frameborder='no' allowtransparency='true' style='width: 100%;'>
 </iframe>
 
 Tentative estimates place this user experience at about a 100% improvement.
 
 ## Conclusion
-Hopefully you don't have to worry about cross-domain iframes that change height on you in your day-to-day life.  But, in the event that you do, an approach like this one can be a handy and simple way to keep the height of said iframes at 100% of their content.  Have you solved this problem using a different approach?  Are there egregious errors in my post?  Let me know!
+Hopefully you don't have to worry about cross-domain iframes that change height on you in your day-to-day life.  If you do, consider this approach.  It is easy to implement and has [pretty good browser support](http://caniuse.com/#search=postMessage).
+
+Have you solved this problem using a different approach?  Are there egregious errors in my post?  Let me know!
 
 <script>        
     window.addEventListener("message", receiveMessage, false);
