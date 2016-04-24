@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+		<style>
+            #cats {
+            width: 300px;
+            }
+		</style>
+	</head>
+	<body>
+		<button id="btnAddCats">Make this page more awesome!</button>
+
+        <div id="cats">
+        </div>
+		<script>
+			window.addEventListener("message", receiveMessage, false);
+
+            var parentMessageEvent;
+
+            function receiveMessage(event) {
+            // Note: you would want to check event.origin here
+            // if this were in the "real" world.
+            var object = JSON.parse(event.data);
+            parentMessageEvent = event;
+            }
+
+            function sendResizeToParentWindow() {
+            if (parentMessageEvent != undefined) {
+                parentMessageEvent.source.postMessage(JSON.stringify({
+                event: 'resize',
+                height: $(document).height(),
+                }), tokenEvent.origin)
+            }
+            };
+
+            $('#btnAddCats').click(function() {
+                $('<img src="https://placekitten.com/g/300/300" alt="Adorable kitten">').load(function() {
+                    $(this).appendTo('#cats');
+                    sendResizeToParentWindow();
+                });
+            });
+		</script>
+	</body>
+
+</html>
