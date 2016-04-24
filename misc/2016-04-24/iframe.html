@@ -5,13 +5,13 @@
 		<script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
 		<style>
             #cats {
-            width: 300px;
+                width: 300px;
             }
 		</style>
 	</head>
 	<body>
 		<button id="btnAddCats">Make this page more awesome!</button>
-
+        <div id="log"></div>
         <div id="cats">
         </div>
 		<script>
@@ -20,10 +20,11 @@
             var parentMessageEvent;
 
             function receiveMessage(event) {
-            // Note: you would want to check event.origin here
-            // if this were in the "real" world.
-            var object = JSON.parse(event.data);
-            parentMessageEvent = event;
+                // Note: you would want to check event.origin here
+                // if this were in the "real" world.
+                $('#log').append('<p>Origin: ' + event.origin);
+                var object = JSON.parse(event.data);
+                parentMessageEvent = event;
             }
 
             function sendResizeToParentWindow() {
