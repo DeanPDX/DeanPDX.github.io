@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Set iframe Height to 100% of Content Height Using window.postMessage"
-date:   2016-04-24 13:45:22
+date:   2016-04-24 13:25:22
 excerpt: "I recently needed to host an iframe with dynamic content and keep the iframe height at 100% of the content height. I solved it using postMessage and you can too."
 featured_image: /images/2016-postMessage/postMessageWithKittens.png
 ---
@@ -46,7 +46,7 @@ var parentMessageEvent;
 
 function receiveMessage(event) {
     // Let's make sure the sender of this message is who we think it is.
-    if (event.origin !== "http://deanpdx.com") {
+    if (event.origin !== 'http://www.deanpdx.com') {
         return;
     }
     var object = JSON.parse(event.data);
@@ -103,7 +103,7 @@ Now, all we need to do is listen for messages, wait for the frame to load and se
     
     function receiveMessage(event) {
         // Let's make sure the sender of this message is who we think it is.
-        if (event.origin !== 'http://deanpdx.com') {
+        if (event.origin !== 'http://www.deanpdx.com') {
             return;
         }
 
@@ -119,7 +119,7 @@ Now, all we need to do is listen for messages, wait for the frame to load and se
             JSON.stringify({
                 event: 'establishCommunication',
                 message: 'Hello, world!'
-            }), 'http://deanpdx.com');
+            }), 'http://www.deanpdx.com');
     });
 {% endhighlight %}
 
@@ -142,7 +142,7 @@ Hopefully you don't have to worry about cross-domain iframes that change height 
     
     function receiveMessage(event) {
         // Let's make sure the sender of this message is who we think it is.
-        if (event.origin !== "http://deanpdx.com") {
+        if (event.origin !== "http://www.deanpdx.com") {
             return;
         }
         
@@ -162,6 +162,6 @@ Hopefully you don't have to worry about cross-domain iframes that change height 
             JSON.stringify({
                 event: 'establishCommunication',
                 message: 'Hello, world!'
-            }), 'http://deanpdx.com');
+            }), 'http://www.deanpdx.com');
     });
 </script>
