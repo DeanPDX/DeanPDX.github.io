@@ -15,29 +15,50 @@
         <div id="cats">
         </div>
 		<script>
+            // Listen for postMessage events.
 			window.addEventListener("message", receiveMessage, false);
 
+            // A variable for storing our parent message event so we can
+            // establish two-way communication.
             var parentMessageEvent;
 
             function receiveMessage(event) {
-                // Note: you would want to check event.origin here
-                // if this were in the "real" world.
-                $('#log').append('<p>Origin: ' + event.origin + '</p>');
+                // Let's make sure the sender of this message is who we think it is.
+                if (event.origin !== 'http://deanpdx.com') {
+                    return;
+                }
                 var object = JSON.parse(event.data);
+                appendToLog('Received postMessage.');
+                appendToLog('Origin: ' + event.origin);
+                appendToLog('Event: ' + object.event);
+                appendToLog('Message: ' + object.message);
+                // Store parent message event for two-way communication
                 parentMessageEvent = event;
+                sendResizeToParentWindow();
             }
-
+            
+            function appendToLog(message) {
+                $('#log').append('<p>' + message + '</p>');
+            }
+            
             function sendResizeToParentWindow() {
-            if (parentMessageEvent != undefined) {
-                parentMessageEvent.source.postMessage(JSON.stringify({
-                event: 'resize',
-                height: $(document).height(),
-                }), tokenEvent.origin)
-            }
+                if (parentMessageEvent != undefined) {
+                    // Note: Chrome is fine with sending JSON objects as the message data
+                    // but some browsers (*glares at IE*) don't like it.  So, to make this
+                    // work on all browsers I am stringifying my objects and JSON.parsing them
+                    // on the other side.
+                    parentMessageEvent.source.postMessage(JSON.stringify({
+                    event: 'resize',
+                    height: $(document).height()
+                    }), parentMessageEvent.origin);
+                }
             };
-
+            
+            // When the user wants to make the page more awesome, you know what to do...
             $('#btnAddCats').click(function() {
-                $('<img src="https://placekitten.com/g/300/300" alt="Adorable kitten">').load(function() {
+                var width = Math.floor((Math.random() * 300) + 100);
+                var height = Math.floor((Math.random() * 300) + 100);
+                $('<img src="https://placekitten.com/' + width + '/' + height + '" alt="Adorable kitten">').load(function() {
                     $(this).appendTo('#cats');
                     sendResizeToParentWindow();
                 });
