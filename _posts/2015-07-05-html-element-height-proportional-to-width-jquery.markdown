@@ -9,7 +9,7 @@ Recently, I needed to have a div element with height proportional to its width. 
 
 ![Modern Tricks Look Awesome in IE8](/images/2015-height-width/modern-solution.png)
 
-##Solution
+## Solution
 First, you will need JQuery. Since I'm supporting old versions of IE, I went with v1.11.3:
 
 {% highlight html %}
