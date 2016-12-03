@@ -9,7 +9,7 @@ featured_image: /images/2016-hellocore/HelloCoreXS.png
 It's an exciting time to be a developer.  The tools available to us are getting better and more platform-agnostic and Microsoft is embracing the Open Source community.  In this post, I am going to explore getting started with a ASP.NET Core app on Mac OS.  I'm using Visual Studio Code as my editor but you can use whatever editor you prefer.  Let's get started!
 
 First off, let's create a directory and run `dotnet new` to create a new C# app.  I'm calling my app HelloCore:
-{% highlight shell %}
+{% highlight bash %}
 Deans-MacBook-Pro:Projects deandavidson$ mkdir HelloCore
 Deans-MacBook-Pro:Projects deandavidson$ cd HelloCore/
 Deans-MacBook-Pro:HelloCore deandavidson$ dotnet new
@@ -61,7 +61,7 @@ namespace ConsoleApplication
 
 Next, let's restore dependencies using `dotnet restore`:
 
-{% highlight shell %}
+{% highlight bash %}
 Deans-MacBook-Pro:HelloCore deandavidson$ dotnet restore
 log  : Restoring packages for /Users/deandavidson/Documents/Projects/HelloCore/project.json...
 log  : Lock file has not changed. Skipping lock file write. Path: /Users/deandavidson/Documents/Projects/HelloCore/project.lock.json
