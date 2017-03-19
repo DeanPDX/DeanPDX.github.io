@@ -39,7 +39,7 @@ If you open your project folder in Visual Studio Code it should look something l
 
 ![After Creation Opening Folder in Visual Studio Code](/images/2017-core-library/AfterCreation.png)
 
-Let's rename `Class1.cs` to `MathHelper.cs` and implement the following prime number checker method:
+Let's rename `Class1.cs` to `MathHelper.cs` and implement the following method to check for prime numbers:
 
 {% highlight csharp %}
 namespace MathLib
