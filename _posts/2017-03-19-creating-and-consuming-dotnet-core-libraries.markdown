@@ -75,7 +75,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 Note that I'm not running `dotnet build` because `dotnet pack` by default first builds the project. You can trigger a pack without a build by passing the `--no-build` option in to the command line.
 
 ## Referencing the Package as a Dependency
-Now we have a library and a NuGet package. Now let's create a console app that references it:
+Now that we have a library with a NuGet package, let's create a console app that references it:
 
 {% highlight bash %}
 Deans-MacBook-Pro:Projects deandavidson$ mkdir MathApp
