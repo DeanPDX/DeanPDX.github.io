@@ -156,7 +156,7 @@ When put together, it looks like this:
 
 ## What About Custom Asynchronous Validators?
 
-Let's implement a custom asyncronous validator and then extend our validation summary to handle it. Here's my new validator to make sure things aren't "bad":
+Let's implement a custom asynchronous validator and then extend our validation summary to handle it. Here's my new validator to make sure things aren't "bad":
 
 {% highlight typescript %}
 import { Directive, forwardRef } from '@angular/core';
@@ -178,7 +178,7 @@ export class CustomValidatorDirective implements AsyncValidator {
         // NOTE: This would normally be observable but for
         // some reason I had trouble with observable.map in
         // stackblitz so I reverted to using a promise.
-        // setTimeout is intented to imitate server latency.
+        // setTimeout is intended to imitate server latency.
         return new Promise<ValidationErrors>(resolve => {
         setTimeout(() => {
           if (c.value.includes('bad') === true) {
