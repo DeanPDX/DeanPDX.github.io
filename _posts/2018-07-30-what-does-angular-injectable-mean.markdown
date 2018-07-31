@@ -5,7 +5,7 @@ date:   2018-07-30 19:33:15
 excerpt: "You might assume that the Angular docs on @Injectable are correct. They are not. Here's everything you (probably don't) need to know!"
 featured_image: /images/2018-angular-injectable/angular-docs.png
 ---
-I have been using the `@Injectable` decorator since 2016 with the understanding that it was to indicate that the component/service I am decorating with `@Injectable` is able to be injected in to other services and components. The [Angular Documentation on Injectable](https://angular.io/api/core/Injectable) says it is "*A marker metadata that marks a class as available to `Injector` for creation*". The documentation goes on to say:
+I have been using the `@Injectable` decorator since 2016 with the understanding that it was to indicate that the component/service I am decorating with `@Injectable` is able to be injected into other services and components. The [Angular Documentation on Injectable](https://angular.io/api/core/Injectable) says it is "*A marker metadata that marks a class as available to `Injector` for creation*". The documentation goes on to say:
 
 > `Injector` will throw an error when trying to instantiate a class that does not have `@Injectable` marker, as shown in the example below.
 
