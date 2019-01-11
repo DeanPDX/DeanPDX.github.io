@@ -2,7 +2,7 @@
 layout: post
 title:  "Announcing Angular Validation Summary on NPM"
 date:   2019-01-11 09:25:26
-excerpt: "Are you an Angular developer that longs for the days of ASP.Net MVC Validation Summaries? You are in luck, my friends!"
+excerpt: "A fast, customizable validation summary library for Angular 7."
 featured_image: /images/2019-angular-validation/validation.png
 ---
 
