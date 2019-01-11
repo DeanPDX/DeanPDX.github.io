@@ -12,13 +12,13 @@ In February of 2018, I wrote [a blog post]({{ site.baseurl }}{% post_url 2018-02
 
 While this was previously somewhat of a chore, [ng-packagr](https://github.com/ng-packagr/ng-packagr) is now built in to the angular CLI making things easy. If you want to know more, follow [this simple guide](https://github.com/angular/angular-cli/wiki/stories-create-library). To make my build/publish steps easier, I added the following scripts to my `package.json`:
 
-```json
+{% highlight json %}
 "build-lib": "ng build angular-validation-summary && npm run copy-license && npm run copy-readme",
 "patch-version": "cd projects/angular-validation-summary && npm version patch && cd ../../",
 "copy-license": "cp ./LICENSE ./dist/angular-validation-summary",
 "copy-readme": "cp ./README.md ./dist/angular-validation-summary",
 "publish-lib": "npm run patch-version && npm run build-lib && npm publish ./dist/angular-validation-summary"
-```
+{% endhighlight %}
 
 This allows me to build, package, and publish my library to the NPM in a single step with `npm run publish-lib`. This also allows me to share my main readme/license with my library project located in `/projects/angular-validation-summary`.
 
