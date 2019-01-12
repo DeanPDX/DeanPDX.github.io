@@ -5,6 +5,9 @@ date:   2018-02-04 15:57:01
 excerpt: "Learn to build your own dynamic Angular 5 Forms Validation Summary."
 featured_image: /images/2018-angular-forms/validation-summary.png
 ---
+
+**1/12/2019 UPDATE:** I expanded on this idea quite a bit and built a ready to use [library that you can download from the NPM](https://github.com/DeanPDX/angular-validation-summary). If you just want a control to use, download the library and give a try. The original article follows below.
+
 At some point you will need to display validation messages in your app. The Angular docs site has a useful [section on form validation](https://angular.io/guide/form-validation) but it centers around hand-coding each validation message. We want to automate that process and display our messages in a standard way.
 
 ## Getting Started
