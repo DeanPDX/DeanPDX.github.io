@@ -1,4 +1,4 @@
 # DeanPDX.github.io
-My Jekyll-based [blog](http://www.deanpdx.com/). These days, I focus mainly on .NET Core and Angular along with whatever other technologies I may be using that interest me.
+My Jekyll-based [blog](http://www.deanpdx.com/). I mainly use/focus on .NET Core, Golang and Angular as these are the technologies I use every day.
 
 Have a correction to make? Send me a pull request!
