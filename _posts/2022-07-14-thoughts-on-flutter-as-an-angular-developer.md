@@ -2,7 +2,7 @@
 layout: post
 title:  "Thoughts on Flutter as an Angular Developer"
 date:   2022-07-14 10:31:13
-excerpt: "After building line of business apps with Angular for years, here's my take on reactive vs template-driven forms."
+excerpt: "Restrospective on launching my first Flutter app as a new Flutter developer by way of Angular mostly for front-end work."
 featured_image: /images/2022-flutter/flutter-logo.png
 ---
 
