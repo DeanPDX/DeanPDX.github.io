@@ -6,14 +6,14 @@ excerpt: "After building line of business apps with Angular for years, here's my
 featured_image: /images/2022-flutter/flutter-logo.png
 ---
 
-A client of mine needed a cross-platform mobile app. I had been wanting to try Flutter for a while, the client was stack-agnostic, so we decided to build it using Flutter. The initial version of the app was limited in scope, but we had ridiculously tight deadlines so it was very much so trial by fire.
+A client of mine needed a cross-platform mobile app. I had been wanting to try Flutter for a while, the client was stack-agnostic, so we decided to build it using Flutter. The initial version of the app was limited in scope, but we had tight deadlines so it was very much so trial by fire. Such is the life of a consultant (and I wouldn't trade it for anything!).
 
 Installation was relatively painless. The only manual step was: you have to manually add the CLI binaries to your `PATH`. But somebody on my team is pretty new and non-technical and they had no problems with installation. The installation also aggressively pushes installing Android Studio but you can get up and running without it initially (by targeting your current platform or Web).
 
 The first thing I noticed is: if you're using VSCode, the integration is great. Everything (F5 to debug, switching targets from Web to Windows to Android, etc.) just works out of the box. It felt like a more mature experience than I expected it to be. Documentation and examples are pretty complete, and the CLI / package management just works without having to Google endless errors to get your project building (I'm looking at you, NPM).
 
 ## Dart
-Dart feels pretty C#-ish to me (and I am not the only person on my team that made that observation). If you have a .NET background, you'll probably feel right at home. It's designed for building UIs, so async / await is very much so a first-class citizen. It can be built JIT with the Dart VM or AOT. If you're building a Flutter app, there is no support for reflection.
+Dart feels ver C#-ish. If you have a .NET background, you'll probably feel right at home. It's designed for building UIs, so async / await is very much so a first-class citizen. It can be built JIT with the Dart VM or AOT. If you're building a Flutter app, there is no support for reflection.
 
 From [the faq](https://dart.dev/faq#q-why-isnt-dart-syntax-more-exciting) under "Why isn’t Dart syntax more exciting?":
 
@@ -55,12 +55,12 @@ Due to the declarative nature of building UIs and how nested their components ar
 
 It would be easier to manage if the closing characters were the same. But since you are using arrays `[]` mixed with single-item constructors `()`, things get tricky (as you can see in the image above). My advice here is: aggressively constrain the scope of your widgets before they become unwieldy. Widgets are cheap. Make many of them, and use stateless where possible.
 
-[Dartpad](https://dartpad.dev/) is great and exactly what you'd expect from a modern framework/toolkit. It's nice (though expected these days) that you can run all of the examples in your browser. Go developers will [feel right at home](https://go.dev/tour/welcome/1).
-
 ## Ecosystem
 My strategy for learning a new framework/language is: I am a hands-on learner initially then I go back and more carefully read the docs after getting my hands dirty a bit. If this sounds like you, after you get your development environment working, head [straight to samples](https://flutter.github.io/samples/#). You can find an example for most of what you will want to do in a mobile app.
 
-As you might imagine from a Google project, [the material design widgets](https://docs.flutter.dev/development/ui/widgets/material) are nice. The [Cupertino (iOS-style) widgets](https://docs.flutter.dev/development/ui/widgets/cupertino) are also quite capable.
+[Dartpad](https://dartpad.dev/) is great and exactly what you'd expect from a modern framework/toolkit. It's nice (though expected these days) that you can run all of the examples in your browser. Go developers will [feel right at home](https://go.dev/tour/welcome/1).
+
+As you might imagine from a Google project, [the material design widgets](https://docs.flutter.dev/development/ui/widgets/material) are nice. The [Cupertino (iOS-style) widgets](https://docs.flutter.dev/development/ui/widgets/cupertino) are also quite capable. Barring the occasional headache, the UI catalog is full-featured and ready for production.
 
 I like the concept of [Flutter Favorites](https://docs.flutter.dev/development/packages-and-plugins/favorites): to identify packages that the Flutter Ecosystem Committee has deemed you should first consider when building your app. How much they actually vet the packages, I don't know. I tried using [package_info_plus](https://pub.dev/packages/package_info_plus) (a Flutter Favorite) and for the life of me couldn't get it working using the package manager. I checked the folder where it was downloaded and there were no `.dart` files so when I tried importing them it wouldn't work. I had to clone the source directly.
 
@@ -113,10 +113,10 @@ From [the docs](https://api.flutter.dev/flutter/widgets/Padding-class.html):
 > Container doesn't implement its properties directly. Instead, Container combines a number of simpler widgets together into a convenient package. For example, the Container.padding property causes the container to build a Padding widget and the Container.decoration property causes the container to build a DecoratedBox widget. If you find Container convenient, feel free to use it. If not, feel free to build these simpler widgets in whatever combination meets your needs.
 
 ### DateTime
-When I began my software career, I didn't realize how much of it would involve me dealing with quotidian DateTime implementation details like timezones and leap years. With every language, date handling has its unique pitfalls. The only thing I found odd with Dart/Flutter is that you have to [install a dependency](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) to be able to format dates.
+When I began my software career, I didn't realize how much of it would involve me dealing with quotidian DateTime implementation details like timezones and leap years. With every language, date handling has its unique pitfalls. The only thing I found odd with Dart/Flutter is that you have to [install a dependency](https://pub.dev/documentation/intl/latest/intl/DateFormat-class.html) to be able to format dates. Other than that, the DateTime class will feel pretty familiar for most developers.
 
 ### Numbers
-Want to round a number to a certain precision? The only way I found to do it is to round it as a string then `num.Parse` it:
+Want to round a number to a fixed precision? The only way I found to do it is to round it as a string then `num.Parse` said string:
 
 ```dart
 n = num.parse(n.toStringAsFixed(2));
@@ -193,7 +193,7 @@ Widget iconButton(String text, IconData icon, void Function()? onPressed) {
 I think this will come more naturally to people with a React background.
 
 ## Navigation / Routing
-The navigator is one of the most capable routing implementations I've used. There are certain things I find myself doing frequently and it was built with all of them in mind. For example, on a list you navigate to a detail then want to refresh list after the detail screen returns and maybe sends some data back? No problem:
+The navigator is one of the most capable routing implementations I've used. There are certain things I find myself doing frequently and it was built with all of them in mind. For example, you have a list screen that navigates to a detail screen. After you navigate from the detail screen back to the list screen you want to refresh. Or conditionally refresh if you know the detail screen changed something that affects the list screen. No problem:
 
 ```dart
 // Push returns a Future<T?> so you can just wait for your 
@@ -209,10 +209,18 @@ MaterialPageRoute(
 })
 ```
 
-Being able to call `Navigator.pop` and always go back to your previous route with your state preserved and a return value is so nice.
+And on your detail screen, here's how you return data to the list screen:
+
+```dart
+Navigator.pop(context, "Here's the message. You better update!");
+```
+
+Being able to call `Navigator.pop` and always go back to your previous route with your state preserved and a return value is very useful.
 
 ## State Management
-For state management I went with the simplest, recommended option: [Provider](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#provider). It doesn't involve a lot of boilerplate, and I enjoyed it. Another popular state management solution is [BLoC](https://medium.com/codechai/architecting-your-flutter-project-bd04e144a8f1) but it involves far more boilerplate / layers which appeals to me less for simpler apps. Most of what I did was use [ChangeNotifierProvider](https://docs.flutter.dev/development/data-and-backend/state-mgmt/simple#changenotifier) combined with [Consumer](https://docs.flutter.dev/development/data-and-backend/state-mgmt/simple#consumer):
+For state management I went with the simplest, recommended option: [Provider](https://docs.flutter.dev/development/data-and-backend/state-mgmt/options#provider). It doesn't involve a lot of boilerplate, you're writing straightforward Dart code, and I had a good experience with it. Another popular state management solution is [BLoC](https://medium.com/codechai/architecting-your-flutter-project-bd04e144a8f1) but it involves far more boilerplate / layers. For relatively simple projects it seems like overkill.
+
+Most of what I did involved using [ChangeNotifierProvider](https://docs.flutter.dev/development/data-and-backend/state-mgmt/simple#changenotifier) in conjunction with [Consumer](https://docs.flutter.dev/development/data-and-backend/state-mgmt/simple#consumer):
 
 ```dart
 class SomeListState with ChangeNotifier {
